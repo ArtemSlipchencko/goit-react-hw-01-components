@@ -1,0 +1,18 @@
+.transaction-history {
+    width: 200px;
+    margin: 0 auto;
+
+    &>thead {
+        background-color: burlywood;
+    }
+}
+
+th {
+    text-align: center;
+    border: solid 1px black;
+}
+
+td {
+    text-align: center;
+    border: solid 1px black;
+}

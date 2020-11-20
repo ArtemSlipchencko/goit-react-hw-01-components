@@ -1,5 +1,6 @@
-import React from "react";
-
+import React from 'react';
+import PropTypes from 'prop-types';
+import './Profile.scss';
 
 const Profile = (props) => {
     
@@ -15,7 +16,7 @@ const Profile = (props) => {
                 className="avatar"
             />
             <p className="name">{name}</p>
-            <p className="tag">{tag}</p>
+            <p className="tag">@{tag}</p>
             <p className="location">{location}</p>
         </div>
 
@@ -36,5 +37,13 @@ const Profile = (props) => {
     </div>
 
 )};
+
+Profile.propTypes = {
+    name: PropTypes.string,
+    tag: PropTypes.string,
+    location: PropTypes.string,
+    avatar: PropTypes.string,
+    stats: PropTypes.object
+};
 
 export default Profile;

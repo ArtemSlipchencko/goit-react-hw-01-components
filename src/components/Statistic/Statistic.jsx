@@ -1,13 +1,14 @@
+import PropTypes from 'prop-types';
 import React from 'react';
+import './Statistic.scss';
 
 const Statistic = (props) => {
 
     const {stat, title} = props;
-
     return (
 
     <section className="statistics">
-        <h2 className="title">{title}</h2>
+        {title !== ''? <h2 className="title">{title}</h2> : ''}
         <ul className="stat-list">
             {
 
@@ -26,6 +27,11 @@ const Statistic = (props) => {
     </section>
 
     )
+};
+
+Statistic.propTypes = {
+    stat: PropTypes.array,
+    title: PropTypes.string
 };
 
 export default Statistic;
